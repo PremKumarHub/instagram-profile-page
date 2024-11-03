@@ -1,19 +1,15 @@
 import React from 'react';
 import './postView.css';
-import postImageSrc from '../img/highlight4.jpg'; // Renamed to avoid conflict
+import video from '../img/reel1.mp4'; // Ensure the correct path
 
-function PostView({ onClose, postImage }) { // Keep postImage as a prop
+function PostView({ onClose }) {
   return (
     <div className="post-view-container">
-      
       <div className="video-section">
-        {/* Display the image or video based on your requirement */}
-        <img src={postImage || postImageSrc} alt="Selected Post" className="post-image" />
-        {/* If using video, uncomment below */}
-        {/* <video controls className="post-video">
-          <source src="path/to/your/video.mp4" type="video/mp4" />
+        <video controls className="post-video">
+          <source src={video} type="video/mp4" />
           Your browser does not support the video tag.
-        </video> */}
+        </video>
       </div>
       <div className="interaction-section">
         <div className="icons">
