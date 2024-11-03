@@ -1,0 +1,33 @@
+/* Highlights.css */
+.highlights {
+  display: flex;
+  overflow-x: auto;
+  padding: 12px 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #dbdbdb;
+
+}
+
+.highlight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 50px;
+  color: #262626;
+}
+
+.highlight img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 1px solid #dbdbdb;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.highlight p {
+  font-size: 12px;
+  margin-top: 6px;
+  text-align: center;
+  color: #555;
+}
