@@ -1,15 +1,19 @@
 import React from 'react';
-import './PostView.css';
+import './postView.css';
+import postImageSrc from '../img/highlight4.jpg'; // Renamed to avoid conflict
 
-function PostView({ onClose }) {
+function PostView({ onClose, postImage }) { // Keep postImage as a prop
   return (
     <div className="post-view-container">
-      <button onClick={onClose} className="close-button">Close</button>
+      
       <div className="video-section">
-        <video controls className="post-video">
+        {/* Display the image or video based on your requirement */}
+        <img src={postImage || postImageSrc} alt="Selected Post" className="post-image" />
+        {/* If using video, uncomment below */}
+        {/* <video controls className="post-video">
           <source src="path/to/your/video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
-        </video>
+        </video> */}
       </div>
       <div className="interaction-section">
         <div className="icons">
@@ -17,6 +21,7 @@ function PostView({ onClose }) {
           <button className="icon">💬</button>
           <button className="icon">📤</button>
           <button className="icon">🔖</button>
+          <button onClick={onClose} className="close-button">Close</button>
         </div>
         <div className="comments">
           <h4>Comments</h4>

@@ -1,49 +1,25 @@
 .post-view-container {
-    display: flex;
-    width: 100%;
-    height: 100vh;
-  }
-  
-  .video-section {
-    flex: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #000; /* Black background for video */
-  }
-  
-  .post-video {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .interaction-section {
-    flex: 1;
-    padding: 20px;
-    background-color: #f9f9f9;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .icons {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
-  
-  .icon {
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-  }
-  
-  .comments {
-    overflow-y: auto;
-    flex: 1;
-  }
-  
-  .comment {
-    margin-bottom: 10px;
-  }
-  
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* Ensure it overlays other elements */
+  display:flex;
+}
+
+.close-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.video-section {
+  margin-bottom: 20px;
+}
