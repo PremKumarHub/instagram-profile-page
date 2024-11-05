@@ -12,12 +12,16 @@ function PostView({ onClose }) {
         </video>
       </div>
       <div className="interaction-section">
+        <button onClick={onClose} className="close-button">Close</button>
+        <div className="description">
+          <h4>Description</h4>
+          <p>This is a sample description for the video content.</p>
+        </div>
         <div className="icons">
           <button className="icon">❤️</button>
           <button className="icon">💬</button>
           <button className="icon">📤</button>
           <button className="icon">🔖</button>
-          <button onClick={onClose} className="close-button">Close</button>
         </div>
         <div className="comments">
           <h4>Comments</h4>

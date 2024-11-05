@@ -6,22 +6,56 @@
     background-color: #fff;
   }
   
-  .post img {
+  .post {
+    position: relative; /* Add this to position the overlay correctly */
+    overflow: hidden; /* Ensure the overlay doesn't overflow the post */
+}
+
+.post img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    cursor:pointer;
-  }
-  .post-title {
+    cursor: pointer;
+    transition: filter 0.3s ease;
+}
+
+.post img:hover {
+    filter: brightness(80%);
+}
+
+.post-title {
     display: flex;
     text-align: center;
-    justify-content: center; 
-   
-  }
-  .post-title img{
-    width:20px;
+    justify-content: center;
+}
+
+.post-title img {
+    width: 20px;
     height: 10%;
     margin-top: 23px;
-    margin-right:  10px;
+    margin-right: 10px;
+}
 
-  }
+.post .overlay {
+    position: absolute; /* Change to absolute to cover the image */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    right: 0; /* Cover the entire width */
+    bottom: 0; /* Cover the entire height */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex; /* Use flex to center the icons */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease;
+}
+
+.post:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+.icon {
+    margin: 0 5px; /* Space between icons */
+    color: white; /* Set icon color */
+    font-size: 20px; /* Adjust icon size */
+}

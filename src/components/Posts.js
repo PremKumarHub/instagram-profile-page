@@ -40,6 +40,10 @@ function Posts() {
         {postImages.map((img, index) => (
           <div className="post" key={index} onClick={() => openPostView(img)}>
             <img src={img} alt={`Post ${index + 1}`} />
+            <div class="overlay">
+                <i class="icon like-icon">❤100</i>
+                <i class="icon comment-icon">📑</i>
+            </div>
           </div>
         ))}
       </div>
