@@ -1,65 +1,70 @@
 .post-view-container {
   position: fixed; 
-  top:0; /* Position at the top */
-  left: 0; /* Position at the left */
-  width: 100%; /* Full width */
-  height: 100%; /* Full height of the viewport */
-  background-color: rgba(0, 0, 0, 0.8); /* Dark background for visibility */
-  display: flex; /* Use flexbox for layout */
-  align-items: center; /* Center content vertically */
-  justify-content: center; /* Center content horizontally */
-  z-index: 100; /* Ensure it's on top of other content */
-  padding: 0px; /* Padding for the container */
-  box-sizing: border-box; /* Include padding in total width/height */
-
-  
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+  background-color: rgba(0, 0, 0, 0.8); 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  z-index: 100; 
+  padding: 0px; 
+  box-sizing: border-box; 
 }
 
-
-
 .post-video {
-  width: 100%; /* Responsive width for medium size */
-  max-width: 480px; /* Set a maximum width for the video */
-  height: 600px; /* Maintain aspect ratio */
+  width: 100%; 
+  max-width: 480px; 
+  height: 600px; 
+}
+
+.video-section {
+  position: relative; /* Needed for positioning */
 }
 
 .interaction-section {
-  background-color: white; /* White background for the interaction section */
-  border-radius: 0; /* Remove rounded corners */
-  height: 600px;
+  background-color: white; 
+  border-radius: 0; 
+  height: 600px; 
+  padding: 20px; /* Added padding for better spacing */
 }
 
 .description {
-  margin-top: 0; /* Remove margin for no gap */
-  flex-grow: 1; /* Allow description to take available height */
+  margin-top: 0; 
+  flex-grow: 1; 
+}
+
+.butt {
+  text-align: end;
 }
 
 .close-button {
-  background-color: #f0f0f0; /* Background for close button */
-  border: none; /* Remove border */
-  padding: 10px 20px; /* Padding for the button */
-  cursor: pointer; /* Pointer cursor on hover */
-  align-self: flex-end; /* Align close button to the right */
+  background-color: #f0f0f0; 
+  border: none; 
+  padding: 10px 20px; 
+  cursor: pointer; 
+  text-align: right;
 }
 
 .icons {
   display: flex;
-  justify-content: space-around; /* Space icons evenly */
-  margin-top: 10px; /* Reduced space above icons */
+  justify-content: space-around; 
+  margin-top: 20px; /* Adjusted margin */
 }
 
 .icon {
-  margin: 0 10px; /* Space between icons */
-  background: none; /* Remove background */
-  border: none; /* Remove border */
-  font-size: 24px; /* Icon size */
-  cursor: pointer; /* Pointer cursor on hover */
-  color: #333; /* Icon color */
+  margin: 0 10px; 
+  background: none; 
+  border: none; 
+  font-size: 24px; 
+  cursor: pointer; 
+  color: #333; 
 }
 
 .comments {
-  margin-top: 10px; /* Reduced space above comments section */
-  color: #e9e4e4; /* Comment text color */
-  max-height: 200px; /* Limit height */
-  overflow-y: auto; /* Enable scrolling if necessary */
+  margin-top: 10px; 
+  color: #867171; 
+  max-height: 200px; 
+  overflow-y: auto; 
 }
