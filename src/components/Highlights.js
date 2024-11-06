@@ -3,7 +3,6 @@ import './Highlights.css';
 import highlight1 from '../img/highlight1.jpg';
 import highlight2 from '../img/highlight2.jpg';
 import highlight3 from '../img/highlight3.jpg';
-import highlight4 from '../img/highlight4.jpg';
 // Import a sample video
 import highlightVideo from '../img/reel1.mp4';
 
