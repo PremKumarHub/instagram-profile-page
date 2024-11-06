@@ -18,6 +18,12 @@
   max-width: 480px; 
   height: 600px; 
 }
+.post-image{
+  width: 100%; 
+  max-width: 480px; 
+  height: 600px; 
+
+}
 
 .video-section {
   position: relative; /* Needed for positioning */
