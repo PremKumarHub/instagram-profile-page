@@ -5,29 +5,53 @@ import highlight1 from '../img/highlight1.jpg';
 import highlight2 from '../img/highlight2.jpg';
 import highlight3 from '../img/highlight3.jpg';
 import post from '../img/posts.jpg';
-import PostView from './PostView'; // Import the PostView component
-
+import reel1 from '../img/reel1.mp4';
+import reel2 from '../img/reel2.mp4';
+import PostView from './PostView';
 
 function Posts() {
   const [isPostViewOpen, setPostViewOpen] = useState(false);
-  const [selectedPost, setSelectedPost] = useState(null); // State for the selected post
+  const [selectedPost, setSelectedPost] = useState(null);
 
-  const postImages = [
-    highlight4,
-    highlight3,
-    highlight2,
-    highlight1,
-    highlight3,
+  const postsData = [
+    {
+      img: highlight4,
+      video: reel1,
+      description: "This is a description for video 1.",
+      type: 'video', // Indicates this post has a video
+    },
+    {
+      img: highlight1,
+      description: "This is a description for image 1.",
+      type: 'image', // Indicates this post is just an image
+    },
+    {
+      img: highlight2,
+      video: reel1,
+      description: "This is a description for video 3.",
+      type: 'video',
+    },
+    {
+      img: highlight3,
+      video: reel2,
+      description: "This is a description for video 4.",
+      type: 'video',
+    },
+    {
+      img: highlight3,
+      description: "This is a description for image 2.",
+      type: 'image',
+    },
   ];
 
-  const openPostView = (img) => {
-    setSelectedPost(img); // Set the selected post
-    setPostViewOpen(true); // Open the PostView
+  const openPostView = (post) => {
+    setSelectedPost(post);
+    setPostViewOpen(true);
   };
 
   const closePostView = () => {
-    setPostViewOpen(false); // Close the PostView
-    setSelectedPost(null); // Reset selected post
+    setPostViewOpen(false);
+    setSelectedPost(null);
   };
 
   return (
@@ -37,19 +61,18 @@ function Posts() {
         <h4>Posts</h4>
       </div>
       <div className="posts">
-        {postImages.map((img, index) => (
-          <div className="post" key={index} onClick={() => openPostView(img)}>
-            <img src={img} alt={`Post ${index + 1}`} />
-            <div class="overlay">
-                <i class="icon like-icon">❤100</i>
-                <i class="icon comment-icon">📑</i>
+        {postsData.map((post, index) => (
+          <div className="post" key={index} onClick={() => openPostView(post)}>
+            <img src={post.img} alt={`Post ${index + 1}`} />
+            <div className="overlay">
+              <i className="icon like-icon">❤100</i>
+              <i className="icon comment-icon">📑</i>
             </div>
           </div>
         ))}
       </div>
 
-      {/* Render the PostView popup conditionally */}
-      {isPostViewOpen && <PostView onClose={closePostView} />}
+      {isPostViewOpen && <PostView onClose={closePostView} post={selectedPost} />}
     </div>
   );
 }

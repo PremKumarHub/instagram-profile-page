@@ -1,15 +1,20 @@
 import React from 'react';
 import './postView.css';
-import video from '../img/reel1.mp4'; // Ensure the correct path
 
-function PostView({ onClose }) {
+function PostView({ onClose, post }) {
+  if (!post) return null;
+
   return (
     <div className="post-view-container">
-      <div className="video-section">
-        <video className="post-video" autoPlay muted playsInline>
-          <source src={video} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+      <div className="media-section">
+        {post.type === 'video' ? (
+          <video className="post-video" autoPlay loop muted={false}>
+            <source src={post.video} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        ) : (
+          <img src={post.img} alt="Post" className="post-image" />
+        )}
       </div>
       <div className="interaction-section">
         <div className="butt">
@@ -17,17 +22,16 @@ function PostView({ onClose }) {
         </div>
         <div className="description">
           <h4>Description</h4>
-          <p>This is a sample description for the video content.</p>
+          <p>{post.description}</p>
         </div>
         <div className="comments">
           <h4>Comments</h4>
           <div className="comment">
-            <strong>User1:</strong> Great video!
+            <strong>User1:</strong> Great content!
           </div>
           <div className="comment">
-            <strong>User2:</strong> Love this content!
+            <strong>User2:</strong> Love this post!
           </div>
-          {/* Add more comments as needed */}
         </div>
         <div className="icons">
           <button className="icon">❤️</button>
