@@ -12,16 +12,17 @@
     position: relative; /* Position for the absolute border */
 }
 
-.border-gradient {
-    width: 130px; /* Width of the border */
-    height: 130px; /* Height of the border */
-    border-radius: 50%; /* Make it circular */
-    padding: 5px; /* Space for the gradient border */
-    background: linear-gradient(45deg, #FF2B75, #FF3C00, #FFAB00, #d10628, #5D9BF4); /* Gradient background */
-    display: flex; /* Center the image */
-    justify-content: center; /* Centering */
-    align-items: center; /* Centering */
+/* .border-gradient {
+    width: 130px; // Width of the border 
+    height: 130px; // Height of the border 
+    border-radius: 50%; // Make it circular 
+    padding: 5px; // Space for the gradient border 
+    background: linear-gradient(45deg, #FF2B75, #FF3C00, #FFAB00, #d10628, #5D9BF4); // Gradient background 
+    display: flex; // Center the image 
+    justify-content: center; // Centering 
+    align-items: center; // Centering 
 }
+*/
 
 .profile-pic img {
     border-radius: 50%; /* Make the image circular */
