@@ -1,15 +1,23 @@
 // ProfileHeader.js
-import React from 'react';
+import React,  { useState } from 'react';
 import './ProfileHeader.css';
 import myimg from '../img/profile.jpg';
 
-
 function ProfileHeader() {
+
+const openpop=() =>{
+  document.getElementById("pop").style.display="flex";
+};
+const closeopop=() =>{
+  document.getElementById("pop").style.display="none";
+}
+
+
   return (
     <div className="profile-header">
       <div className="profile-pic">
     <div className="border-gradient">
-        <img src={myimg} alt="Profile" />
+        <img src={myimg} onClick={openpop} alt="Profile" />
     </div>
 </div>
 
@@ -40,6 +48,9 @@ function ProfileHeader() {
           Sustainable fashion, clean beauty, wellness, eco-travel...
         </p>
        
+      </div>
+      <div className="profile-popup" id="pop" onClick={closeopop}>
+        <img src={myimg}  />
       </div>
     </div>
   );

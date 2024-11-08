@@ -2,8 +2,8 @@
   display: flex;
   overflow-x: auto;
   padding: 12px 20px;
-  background-color: #fff;
   border-bottom: 1px solid #dbdbdb;
+  
 }
 
 .highlight {
@@ -12,8 +12,11 @@
   align-items: center;
   margin-right: 50px;
   color: #262626;
+  filter:brightness(80%);
 }
-
+.highlight img:hover{
+  filter:brightness(80%);
+}
 .highlight img,
 .highlight video {
   width: 90px;
@@ -22,6 +25,7 @@
   border: 1px solid #dbdbdb;
   cursor: pointer;
   object-fit: cover;
+  background-color: black;
 }
 
 .highlight p {
@@ -55,6 +59,8 @@
   max-width: 90%;
   max-height: 90%;
   overflow: hidden;
+  object-fit: cover;
+  background-color: black;
 }
 
 .modal-content img,
