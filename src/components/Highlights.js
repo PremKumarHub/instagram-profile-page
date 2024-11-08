@@ -50,10 +50,10 @@ function Highlights() {
             {selectedHighlight.type === 'image' ? (
               <img src={selectedHighlight.src} alt={selectedHighlight.name} />
             ) : (
-              <video src={selectedHighlight.src} controls autoPlay />
+              <video src={selectedHighlight.src} autoPlay loop muted={false} />
             )}
             <p>{selectedHighlight.name}</p>
-            <button onClick={closeHighlight}>Close</button>
+          { /*<button onClick={closeHighlight}>Close</button> */}
           </div>
         </div>
       )}

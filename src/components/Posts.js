@@ -27,9 +27,8 @@ function Posts() {
     },
     {
       img: highlight2,
-      video: reel1,
       description: "This is a description for video 3.",
-      type: 'video',
+      type: 'image',
     },
     {
       img: highlight3,
