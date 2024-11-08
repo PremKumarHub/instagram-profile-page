@@ -30,7 +30,7 @@ function ProfileHeader() {
         </div>
         <p className="bio">
        
-            <strong>Vic Styles</strong><br />
+            <strong>CODETHEWORLD</strong><br />
            
           
        
