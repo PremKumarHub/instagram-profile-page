@@ -23,8 +23,6 @@ function PostView({ onClose, post }) {
         <div className="description">
           <h4>Description</h4>
           <p>{post.description}</p>
-        </div>
-        <div className="comments">
           <h4>Comments</h4>
           <div className="comment">
             <strong>User1:</strong> Great content!

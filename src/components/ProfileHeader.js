@@ -23,7 +23,7 @@ const closeopop=() =>{
 
       <div className="profile-details">
         <div class="flex">
-        <h2>thevicstyles</h2>
+        <h2>CODETHEWORLD</h2>
 
 
         <div class="profile-actions">
