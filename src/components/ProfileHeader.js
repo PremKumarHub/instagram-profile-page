@@ -1,5 +1,5 @@
 // ProfileHeader.js
-import React,  { useState } from 'react';
+
 import './ProfileHeader.css';
 import myimg from '../img/profile.jpg';
 
@@ -50,7 +50,7 @@ const closeopop=() =>{
        
       </div>
       <div className="profile-popup" id="pop" onClick={closeopop}>
-        <img src={myimg}  />
+        <img src={myimg} alt="nothing" />
       </div>
     </div>
   );
