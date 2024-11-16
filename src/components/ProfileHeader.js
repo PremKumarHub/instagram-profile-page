@@ -42,10 +42,10 @@ const closeopop=() =>{
            
           
        
-          Digital creator<br />
-          Founder @blackgirlssmoke & @gooddayflor<br />
-          1/2 @kontentqueens<br />
-          Sustainable fashion, clean beauty, wellness, eco-travel...
+          👨‍💻 Software Engineer <br />
+          Code Ninja 💻<br />
+          Passionate about tech, innovation & problem-solving<br />
+          Life’s a puzzle, let’s debug it ✨
         </p>
        
       </div>
