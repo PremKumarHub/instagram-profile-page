@@ -8,10 +8,10 @@ import highlightVideo from '../img/reel1.mp4';
 
 function Highlights() {
   const highlights = [
-    { name: 'kabib', type: 'image', src: highlight1 },
-    { name: 'mighty mouse', type: 'image', src: highlight2 },
-    { name: 'conor', type: 'image', src: highlight3 },
-    { name: 'khamzat', type: 'video', src: highlightVideo } // Sample video
+    { name: 'hightlight1', type: 'image', src: highlight1 },
+    { name: 'hightlight2', type: 'image', src: highlight2 },
+    { name: 'hightlight3', type: 'image', src: highlight3 },
+    { name: 'hightlight4', type: 'video', src: highlightVideo } // Sample video
   ];
 
   const [selectedHighlight, setSelectedHighlight] = useState(null);
